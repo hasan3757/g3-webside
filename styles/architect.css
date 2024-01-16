@@ -61,14 +61,96 @@ nav li a{
     width: 100%;
     margin-top: 20px;
 }
+
+/*main styles*/
+main{
+    max-width: 1440px;
+    margin: 70px auto;
+}
+/*team styles*/
+.teams-container{
+    display: flex;
+    align-items: center;
+}
+.team-img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+.team-content{
+    padding-left: 70px;
+    padding-right: 70px;
+} 
+.title{
+    font-size: 45px;
+}   
+.title .first{
+    color: #727272;
+    font-weight: 500;
+}
+.title .second{
+    color: #131313;
+    font-weight: 700;
+}
+.title .third{
+    color: #FF900E;
+    font-weight: 700;
+}
+.description{
+    color: #727272;
+    font-weight: 400;
+}
+.meni{
+    color: #131313;
+    font-size: 45px;
+    font-weight: 700;
+}
+.test{
+  color: #727272;  
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+/*fact section*/
+.facts-card-img{
+    display: flex;
+    justify-content: space-around;
+}
+.facts .card{
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+} 
+.facts-card-img .card-stats{
+    font-size: 45px;
+    color: #424242;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}  
+.facts-card-img .card-title{
+    font-size: 20px;
+    font-weight: 600;
+    color: #424242;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
 /*responsive media queries*/
   /*mobile devices*/
-@media screen and (max-width: 576px) {
+  @media screen and (max-width: 576px) {
     header{
         padding: 20px;
     }
-    nav {
+    nav,
+    .teams-container 
+    {
         flex-direction: column;
+    }
+    .team-img{
+        grid-template-columns: 1fr;
     }
 }
   /*medium devices*/
@@ -76,7 +158,15 @@ nav li a{
     header{
         padding: 50px;
     }
-    nav {
-        flex-direction: column;
     }
-}
+    nav,
+    
+    
+    .team-img{
+        grid-template-columns: 2 1fr;
+    }
+    .team-content{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
